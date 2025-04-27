@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.util.Scanner;
 
 @SpringBootApplication
 public class WeatherAppApplication implements CommandLineRunner {
@@ -17,8 +18,11 @@ public class WeatherAppApplication implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String... args) throws Exception {
-		String cityName = "Istanbul"; // Burada hangi şehrin hava durumunu görmek istersen yaz
+	public void run(String... args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Bir şehir ismi giriniz: ");
+		String cityName = scanner.nextLine();
+
 		String weatherData = weatherService.getWeatherData(cityName);
 		System.out.println(weatherData);
 	}
