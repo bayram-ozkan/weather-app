@@ -16,14 +16,28 @@ Simple Weather Application built with Java Spring Boot that fetches real-time we
 
 ## How to Run
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/semasahinbay/weather-app.git
+    ```bash
+    git clone https://github.com/semasahinbay/weather-app.git
+    ```
+
 2. Navigate to the project directory:
-   ```bash
-   cd weather-app
-3. Update your src/main/resources/application.properties with your OpenWeatherMap API key.
+    ```bash
+    cd weather-app
+    ```
+
+3. Update your `src/main/resources/application.properties` file with your OpenWeatherMap API key.
+
 4. Run the application:
-   ```bash
-   mvn spring-boot:run
-## API Source:
-OpenWeatherMap API
+    ```bash
+    mvn spring-boot:run
+    ```
+
+5. Use the Application:
+    - You can **enter the city name** when prompted in the console.
+    - Or you can **send a request from your browser** like:
+      ```
+      http://localhost:8080/weather?city=Istanbul
+      ```
+
+## API Source
+- [OpenWeatherMap API](https://openweathermap.org/api)
