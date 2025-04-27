@@ -19,11 +19,15 @@ public class WeatherAppApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Bir şehir ismi giriniz: ");
-		String cityName = scanner.nextLine();
+		if (args.length == 0) {
+			// Eğer tarayıcı üzerinden bir şehir parametresi gelmemişse konsoldan iste
+			Scanner scanner = new Scanner(System.in);
+			System.out.print("Bir şehir ismi giriniz: ");
+			String cityName = scanner.nextLine();
 
-		String weatherData = weatherService.getWeatherData(cityName);
-		System.out.println(weatherData);
+			String weatherData = weatherService.getWeatherData(cityName);
+			System.out.println(weatherData);
+		}
 	}
+
 }
