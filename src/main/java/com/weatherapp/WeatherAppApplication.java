@@ -1,5 +1,7 @@
-// // local de çalışması için burası açınız
+// // Local de çalıştırılacağı zaman burasını açınız ve aşağıyı pasif haline getiriniz
+
 // package com.weatherapp;
+
 // import com.weatherapp.service.WeatherService;
 // import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.boot.CommandLineRunner;
@@ -20,7 +22,7 @@
 // 	@Override
 // 	public void run(String... args) {
 // 		if (args.length == 0) {
-// 			Eğer tarayıcı üzerinden bir şehir parametresi gelmemişse konsoldan iste
+// 			// Eğer tarayıcı üzerinden bir şehir parametresi gelmemişse konsoldan iste
 // 			Scanner scanner = new Scanner(System.in);
 // 			System.out.print("Bir şehir ismi giriniz: ");
 // 			String cityName = scanner.nextLine();
